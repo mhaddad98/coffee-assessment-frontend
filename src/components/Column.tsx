@@ -13,7 +13,7 @@ interface Props {
 
 async function fetchData(service: string, status: string) {
   const response = await axios.get(
-    `http://serve:3001/activities/${service}/${status}`
+    `http://localhost:3001/activities/${service}/${status}`
   );
 
   return response.data;
