@@ -30,7 +30,7 @@ function Column({ service, status }: Props) {
     status === "started" ? "green" : status === "finished" ? "blue" : "red";
 
   useEffect(() => {
-    const client = mqtt.connect("ws://rabbitmq:15675/ws", {
+    const client = mqtt.connect("ws://localhost:15675/ws", {
       protocol: "ws",
       clientId: `${service}-${Math.random()}`,
       reconnectPeriod: 5000,
